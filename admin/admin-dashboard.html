@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard — B.A.R.D</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>B.A.R.D Content Editor</h1>
+    <div class="panel">
+      <p>This editor lets you load <code>../content.json</code>, modify it, and download an updated file you can upload to GitHub.</p>
+      <p><button class="btn" onclick="loadJson()">Load current content.json</button>
+         <button class="btn" onclick="downloadJson()">Download edited JSON</button></p>
+      <textarea id="editor" style="width:100%;min-height:360px;font-family:monospace"></textarea>
+    </div>
+  </div>
+  <script>
+    async function loadJson(){
+      const res = await fetch('../content.json', {cache:'no-store'});
+      const data = await res.text();
+      document.getElementById('editor').value = data;
+    }
+    function downloadJson(){
+      const blob = new Blob([document.getElementById('editor').value], {type:'application/json'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'content.json';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+  </script>
+</body>
+</html>

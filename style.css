@@ -1,0 +1,23 @@
+
+/* Retro 1960s British laboratory aesthetic */
+:root{
+  --ink:#1f1f1f; --paper:#f0ece2; --accent:#0b3c66; --grid:#c5bfae; --stamp:#b21f2d;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:"Courier New", monospace; margin:0; background:var(--paper); color:var(--ink)}
+.wrap{max-width:1100px; margin:0 auto; padding:24px}
+header{display:flex; align-items:center; gap:16px; border-bottom:3px solid #2b2b2b; padding-bottom:16px}
+header img.logo{height:84px}
+header h1{margin:0; font-size:28px; letter-spacing:.5px}
+.sub{color:#444; margin-top:4px}
+nav{margin:14px 0 22px 0; border-top:1px solid var(--grid); border-bottom:1px solid var(--grid); padding:10px 0}
+nav a{color:var(--accent); text-decoration:none; font-weight:700; margin-right:14px}
+.hero{display:grid; grid-template-columns:1.4fr 1fr; gap:18px; align-items:start}
+.panel{background:#fff; border:1px solid #cfc7b6; box-shadow:0 1px 0 #bfb7a4; padding:16px}
+.panel h2{margin:0 0 8px 0; font-size:18px}
+.meta{font-size:12px; color:#555}
+.stamp{display:inline-block; background:var(--stamp); color:#fff; font-weight:800; padding:2px 8px; letter-spacing:.08em}
+.btn{display:inline-block; background:var(--accent); color:#fff; padding:8px 10px; text-decoration:none}
+footer{margin-top:28px; border-top:1px solid var(--grid); padding-top:10px; font-size:12px; color:#555}
+@media (max-width: 900px){ .hero{grid-template-columns:1fr} }

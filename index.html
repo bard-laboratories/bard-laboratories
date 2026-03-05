@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>British Atomic Research Division — Main Archive</title>
+  <link rel="preload" as="image" href="assets/bard_logo.png">
+  <link rel="stylesheet" href="style.css" />
+  <noscript><style>.requires-js{display:none}</style></noscript>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="assets/bard_logo.png" class="logo" alt="B.A.R.D logo"/>
+      <div>
+        <h1 data-bind="siteTitle">British Atomic Research Division</h1>
+        <div class="sub" data-bind="tagline">Windscale Programme • Quarantine Zone Directorate • Robotics & Advanced Research</div>
+      </div>
+    </header>
+
+    <nav>
+      <a href="bard.html">About B.A.R.D</a>
+      <a href="locations.html">Locations</a>
+      <a href="projects.html">Projects</a>
+      <a href="robots.html">Robotics</a>
+      <a href="dossier.html">Dossiers</a>
+      <a href="terminal.html">Terminal</a>
+      <a href="admin/admin-login.html">Admin</a>
+    </nav>
+
+    <section class="hero">
+      <div class="panel">
+        <h2 data-bind="hero.title">Welcome, Research Personnel</h2>
+        <p class="requires-js" data-bind="hero.body">This archive consolidates B.A.R.D records from the Windscale programme and associated bunkers. Following the incident, the Division fragmented; some cells pursue the underlying cause while legacy sentry units continue autonomous patrols across the quarantine zone.</p>
+        <p class="meta">Use the navigation above to access <strong>Locations</strong>, <strong>Projects</strong>, and the <strong>Robotics</strong> registry.</p>
+        <p><a class="btn" data-bind="hero.cta" href="dossier.html">Open Classified Dossiers</a></p>
+      </div>
+      <div class="panel">
+        <h2>Notice</h2>
+        <p><span class="stamp">CLASSIFIED</span> Access to certain records requires administrative clearance.</p>
+        <ul>
+          <li>Admin console: <code>/admin/admin-login.html</code></li>
+          <li>Credentials (default): <code>Admin / Areyouadmin?</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      © 1966–2026 B.A.R.D Archives • For training and demonstration purposes
+    </footer>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
